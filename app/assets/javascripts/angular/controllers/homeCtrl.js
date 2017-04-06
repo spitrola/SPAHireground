@@ -1,6 +1,4 @@
-angular.module('myapp', [])
-.controller('homeCtrl', [
-'$scope',
-function($scope){
-  $scope.test = 'Hello world!';
-}]);
+angular.module('myapp')
+.controller('homeCtrl', function(){
+
+});

@@ -1,16 +1,19 @@
 angular.module('myapp', ['ui.router', 'templates'])
 
-  .config(['$stateProvider','$urlRouterProvider',
+.config(function($stateProvider, $urlRouterProvider){
+  $urlRouterProvider.otherwise('/home');
+  $stateProvider
 
-  function($stateProvider, $urlRouterProvider) {
+  .state('home', {
+    url: '/home',
+    abstract: true,
+    templateUrl: 'angular/views/home.html',
+    controller: 'homeCtrl'
+  })
 
-    $stateProvider
+})
 
-      .state('home', {
-        url: '/home',
-        templateUrl: 'angular/views/home.html',
-        controller: 'homeCtrl'
-      });
-
-    $urlRouterProvider.otherwise('home');
-  }]);
+.run(function($rootScope, $state, $stateParams){
+  $rootScope.$state = $state;
+  $rootScope.$stateParams = $stateParams;
+});
