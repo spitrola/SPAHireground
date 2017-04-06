@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat="punch in punches">
     <div class="thumbnail">
-      <img src="assets/{{punch.image}}" alt="{{punch.title}}" id="imageSize">
+      <img ng-src="assets/{{punch.image}}" alt="{{punch.title}}" id="imageSize">
       <div class="caption">
         <h3>{{punch.title}}</h3>
       </div>
