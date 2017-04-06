@@ -1,1 +1,14 @@
-<h1>Home</h1>
+<nav class="navbar navbar-default">
+  <div class="container">
+      <a class="navbar-brand" ui-sref="home.content">SPAHireground Sample</a>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="home.content">Calgary Flames</a></li>
+        <li><a ui-sref="home.about">About</a></li>
+      </ul>
+
+  </div>
+</nav>
+<div class="container">
+  <ui-view></ui-view>
+</div>
