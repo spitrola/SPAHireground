@@ -1,28 +1,28 @@
 angular.module('myapp', ['ui.router', 'templates'])
 
 .config(function($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise('/home/content');
+  $urlRouterProvider.otherwise('/app/myhobby');
   $stateProvider
 
-  .state('home', {
-    url: '/home',
-    templateUrl: 'angular/views/home.html',
-    controller: 'homeCtrl'
+  .state('app', {
+    url: '/app',
+    templateUrl: 'angular/views/app.html',
+    controller: 'appCtrl'
   })
 
-  .state('home.about', {
+  .state('app.about', {
     url: '/about',
     templateUrl: 'angular/views/about.html',
     controller: 'aboutCtrl'
   })
 
-  .state('home.content', {
-    url: '/content',
-    templateUrl: 'angular/views/content.html',
-    controller: 'contentCtrl'
+  .state('app.myhobby', {
+    url: '/myhobby',
+    templateUrl: 'angular/views/myhobby.html',
+    controller: 'myhobbyCtrl'
   })
 
-  .state('home.famous', {
+  .state('app.famous', {
     url: '/famous',
     templateUrl: 'angular/views/famous.html',
     controller: 'famousCtrl'

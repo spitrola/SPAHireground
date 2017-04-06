@@ -1,5 +1,5 @@
 angular.module('myapp')
-.controller('contentCtrl', function($scope){
+.controller('myhobbyCtrl', function($scope){
   $scope.punches = [
     {title: 'Jab', image:'jab.png'},
     {title: 'Cross', image:'cross.png'},
