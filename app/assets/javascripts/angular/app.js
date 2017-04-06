@@ -22,4 +22,10 @@ angular.module('myapp', ['ui.router', 'templates'])
     controller: 'contentCtrl'
   })
 
+  .state('home.famous', {
+    url: '/famous',
+    templateUrl: 'angular/views/famous.html',
+    controller: 'famousCtrl'
+  })
+
 });
