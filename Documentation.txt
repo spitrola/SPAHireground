@@ -1,0 +1,31 @@
+Steps used to setup my single page application:
+1) Installed node.js and bower.js components
+
+2) Installed Ruby on Rails
+  a) created new ruby on rails project.
+  b) added gem file angular-rails-templates and ran bundle install.
+
+3) Performed a bower init (creates bower.json file) and installed bower packages
+  a) bower install angular angular-ui-router bootstrap --save
+  b) created a .bowerrc file and added the directory path as "vendor/assets/bower_components
+
+4) Added the angular components to the application.js
+  - require angular
+  - require angular-rails-templates
+  - require angular-ui-router
+
+5) Within layouts changed the application.html.erb file by removing <%= yield %> and replacing it with <ui-view></ui-view>. Also added ng-app to the html to indicate the start of Angular JS.
+
+6) Within the config/routes file added the root, which is
+    - root 'application#index'
+
+7) Within the controller/application_controller.rb added the method index which will render the layouts/application file which points to application.html.erb
+
+8) Inside the javascripts folder create a folder called "angular" (this contains the angular directories such as controllers and views)
+
+9) Within the javascripts/angular folder added a app.js file, which will contain the configuration for angular routes.
+
+
+Steps used to run my single page application:
+1) cd into project and run bundle install to install gems
+2) Start the rails server using this command 'rails s' and go to http://localhost:3000/
