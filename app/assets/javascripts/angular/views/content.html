@@ -1,1 +1,13 @@
-<h1>Content</h1>
+<h1 class="text-center">My Hobby is Boxing</h1>
+<h2>Punches:</h2>
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="punch in punches">
+    <div class="thumbnail">
+      <img src="assets/images/jab.png" alt="{{punch.title}}">
+      <div class="caption">
+        <h3>{{punch.title}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
